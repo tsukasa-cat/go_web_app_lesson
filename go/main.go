@@ -77,6 +77,5 @@ func main() {
     db.Delete(&user)
   })
 
-
   router.Run()
 }
