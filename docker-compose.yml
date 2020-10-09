@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+    golang:
+        build:
+            context: .
+            dockerfile: docker/golang/Dockerfile
+        tty: true
+        ports:
+            - "8080:8080"
+        container_name: golang-server
+        volumes:
+            - ./go:/app
+        environment:
+            - "GOPATH:/go"
+        command: /bin/sh -c "go run main.go"
+        # depends_on:
