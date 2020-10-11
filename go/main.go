@@ -67,7 +67,7 @@ func main() {
     user.LastName = c.PostForm("last_name")
     user.FirstName = c.PostForm("first_name")
     user.Email = c.PostForm("email")
-    user.phone = c.PostForm("phone")
+    user.Phone = c.PostForm("phone")
   })
 
   router.DELETE("/user/:username", func(c *gin.Context) {
